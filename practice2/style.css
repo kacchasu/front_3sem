@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 14pt;
+    background-color: black;
+    color: peachpuff;
+}
+a {
+    color: coral;
+}
+a:visited {
+    color: saddlebrown;
+}
+a:hover{
+    color: crimson;
+}
+
+
+header {
+    display: block;
+    background: #000000;
+}
+
+.header-bg {
+    height: 100px;
+    text-align: center;
+}
+
+.header-bg img {
+    position: relative;
+    top: 10px;
+}
+
+p{
+    text-align: justify; /* Выравнивание по ширине */
+    margin-left: 60px; /* Отступ слева в пикселах */
+    margin-right: 10px; /* Отступ справа в пикселах */
+    border-left: 1px solid #e5d2b8; /* Параметры линии слева */
+    border-bottom: 1px solid #e5d2b8; /* Параметры линии снизу */
+    padding-left: 10px; /* Отступ от линии слева до текста  */
+    padding-bottom: 10px; /* Отступ от линии снизу до текста  */
+}
+div > nav {
+    font-size: 60px;
+}
+
+section h3 {
+    border-top: 6px dashed #e5d2b8; /* Параметры линии сверху */
+    font-family: 'Roboto', sans-serif;
+}
+h1 {
+    font-size: 60px;
+}
+h1, h2, h4 {
+    font-family: 'Roboto', sans-serif;
+}
+h1 {
+    margin: 10px 40px 10px 10px;
+    padding: 10px;
+}
+aside + article {
+    margin: 10px;
+    border: 2px solid #e5d2b8;
+    padding: 30px;
+}
