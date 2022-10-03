@@ -1,5 +1,23 @@
+nav {
+    display: block;
+    border: 5px solid #e5d2b8;
+    text-decoration: overline;
+    position: fixed;
+    right: 12%;
+    z-index: 1;
+    background: black;
+    padding: 20px;
+}
+#mewhen {
+    z-index: 1;
+    display: block;
+    position:fixed;
+    left: 71%;
+    top: 330px;
+}
 body {
     margin: 0;
+    display: block;
     font-family: Arial;
     font-size: 14pt;
     background-color: black;
@@ -10,9 +28,11 @@ a {
     text-decoration: none;
 }
 a:visited {
+    display: block;
     color: saddlebrown;
 }
 a:hover{
+    display: block;
     color: crimson;
 }
 
@@ -22,9 +42,8 @@ header {
     background: #000000;
 }
 
-.header-bg {
-    height: 100px;
-    text-align: center;
+div {
+    position: relative;
 }
 
 .header-bg img {
@@ -49,10 +68,14 @@ section h3 {
     border-top: 6px dashed #e5d2b8; /* Параметры линии сверху */
     font-family: 'Roboto', sans-serif;
 }
+main {
+    display: inline;
+}
 h1 {
     font-size: 60px;
 }
 h1, h2, h4 {
+    position: relative;
     font-family: 'Roboto', sans-serif;
 }
 h1 {
@@ -63,4 +86,35 @@ aside + article {
     margin: 10px;
     border: 2px solid #e5d2b8;
     padding: 30px;
+}
+aside {
+    display: inline;
+    float: right;
+}
+.icons_low {
+    position: relative;
+    left: 70px;
+}
+.layer1 {
+    position: -webkit-sticky;
+    top: 15px;
+}
+
+#collage {
+    position: relative;
+    padding: 60px;
+}
+
+img {
+    position: sticky;
+    top: 0;
+}
+
+#contacts {
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+footer {
+    float: top;
 }
