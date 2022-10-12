@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>front-end courses form</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<div align="center" class="courses_form_info">
+    if your front-end looks like this dont go away and enroll on our courses <br>
+    you won't regret it!
+    <iframe src="video.html" title="videoex" width="650" height="470">
+    </iframe>
+</div>
+<form class="courses_form" name="registration" method="POST">
+    <div align="right" id="reset">
+        <button name="button" type="reset">reset form</button>
+    </div>
+    <div class="courses_form_info" align="center"><h2>enrollment form for front-end courses</h2></div>
+    <div class="courses_form_info" align="center">
+        <label for="gender">who are you*</label>
+        <select name="gender" id="gender" required="required" multiple>
+            <option>male</option>
+            <option>female</option>
+            <option>non-binary</option>
+            <option>other</option>
+        </select>
+        <label>name*: <input type="text" name="name" required="required" patter="^[a-zA-Z]+$"></label>
+        <label>email*: <input type="email" name="email" required="required" placeholder="example@email.com"></label>
+        <label>tel*: <input type="tel" name="tel" required="required"></label>
+        <label>create password*: <input type="password" name="password" required="required"></label>
+    </div>
+    <div class="courses_form_info" align="center">
+        <div>briefly about what you expect from the courses*</div>
+        <textarea name="message" rows="5" cols="49" id="about" maxlength="300" minlength="1"
+                  placeholder="type something (1-300 symbols)" required></textarea>
+        <label>your favourite meme about front-end*: <input type="file" name="file" required="required"></label>
+    </div>
+    <div class="courses_form_info" align="center">
+        <fieldset>
+            <legend align="center">how many hours a week you ready to spend on classes*</legend>
+            <label>
+                <input type="radio" name="answer" value="1-2">
+                1-2
+            </label>
+            <label>
+                <input type="radio" name="answer" value="3-5">
+                3-5
+            </label>
+            <label>
+                <input type="radio" name="answer" value="6-8">
+                6-8
+            </label>
+            <label>
+                <input type="radio" name="answer" value="0" checked>
+                0 why should i spend my time on front-end lol
+            </label>
+        </fieldset>
+    </div>
+    <div class="courses_form_info" align="center">
+        <label>select a date for the interview*: <input type="datetime-local" name="date" min="2022-10-09T13:13"
+                                                        max="2022-12-09T22:22"></label>
+        <label><input type="checkbox" name="checkbox">receive email announcements</label><br>
+        <input type="submit" name="submit_btn" value="send">
+    </div>
+</form>
+</body>
+
+</html>
