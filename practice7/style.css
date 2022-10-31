@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #161623;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(30% at right 70%);
+    background: linear-gradient(#f00, #f0f);
+}
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#2196f3, #e91e63);
+    clip-path: circle(20% at 10% 10%);
+}
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+.container .card {
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+.container .card .content {
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+}
+.container .card:hover .content {
+    transform: translateY(0px);
+    opacity: 1;
+}
+.card:hover {
+    transition: 1s linear;
+    transform:  scale(110%);
+    z-index: 2;
+}
+.card:hover + .modal {
+    position: absolute;
+    width: 100%;
+    height: 152%;
+    z-index: 1;
+    backdrop-filter: blur(20px);
+    transition: 1s;
+}
+.container .card .content h2 {
+    position: absolute;
+    top: -40px;
+    right: 30px;
+    font-size: 8em;
+    color: rgba(255, 255, 255, 0.15);
+    pointer-events: none;
+}
+.container .card .content h3 {
+    font-size: 1.8em;
+    color: #fff;
+    z-index: 1;
+}
+.container .card .content p {
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+}
+.container .card .content a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background: #fff;
+    color: #000;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.container .card .circle, .circle1, .circle2 {
+    width: 30px;
+    height: 30px;
+    background-color: #e91e63;
+    position: absolute;
+    border-radius: 50%;
+    backdrop-filter: blur(5px);
+    filter: blur(5px) saturate(150%);
+    transition: 1s;
+}
+@keyframes card-circle {
+    from{
+        left: calc(100% - 30px);
+        top: 0;
+    }
+    25% {
+        left: 0;
+        top: 0;
+    }
+    50%{
+        left: 0;
+        top: calc(100% - 30px);
+    }
+    75%{
+        left: calc(100% - 30px);
+        top: calc(100% - 30px);
+    }
+    to{
+        left: calc(100% - 30px);
+        top: 0;
+    }
+}
+@keyframes card-circle2 {
+    from{
+        left: 0;
+        top: calc(100% - 30px);
+    }
+    25% {
+        left: calc(100% - 30px);
+        top: calc(100% - 30px);
+    }
+    50%{
+        left: calc(100% - 30px);
+        top: 0;
+    }
+    75%{
+        left: 0;
+        top: 0;
+    }
+    to{
+        left: 0;
+        top: calc(100% - 30px);
+    }
+}
+.container .card:hover .circle1 {
+    background: white;
+    animation: card-circle 8s linear infinite reverse;
+    filter: blur(30px) brightness(1000%);
+}
+.container .card:hover .circle2 {
+    background: white;
+    animation: card-circle2 8s linear infinite reverse;
+    filter: blur(10px) brightness(1000%);
+}
+.btn {
+    border: none;
+    padding: 8px;
+    border-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.tg {
+    transition: 1s ease-in;
+}
+.yt {
+    transition: 1s ease-in;
+}
+.twi {
+    transition: 1s ease-in;
+}
+.sp {
+    transition: 1s ease-in;
+}
+.inst {
+    transition: 1s ease-in;
+}
+
+
+button img {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    z-index: 3;
+}
+footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    bottom: -20px;
+}
+button {
+    background: none;
+    overflow: hidden;
+    display: flex;
+
+}
+.buttons {
+    padding: 1em;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.border-rays::before {
+    content: '';
+    filter: brightness(70%);
+    position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    background-repeat: no-repeat;
+    background-size: 50% 50%, 50% 50%;
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    background-image: linear-gradient(#2196f3, #e91e63), linear-gradient(#f00, #f0f), linear-gradient(#2196f3, #e91e63), linear-gradient(#f00, #f0f);
+    animation: anim-border-rays 8s linear infinite;
+    opacity: 0.5;
+    animation-play-state: paused;
+}
+.border-rays:hover::before {
+    animation-play-state: running;
+    filter: brightness(130%);
+}
+.border-rays:hover {
+    box-shadow: 0 0 0 99999px rgba(0, 0, 0, 0.8);
+}
+.border-rays::after {
+    content: '';
+    filter: brightness(70%);
+    position: absolute;
+    z-index: -1;
+    left: 6px;
+    top: 6px;
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+    border-radius: 5px;
+}
+@keyframes anim-border-rays {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+.holder {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width:100vw;
+    height: 100vh;
+    transform: translateY(-100vh);
+    transition: 1s linear;
+}
+.tg1 {
+    background: linear-gradient(#0088cc, #e91e63);
+}
+.yt1 {
+    background: linear-gradient(#b9021e, #e91e63);
+}
+.twi1 {
+    background: linear-gradient(#25aff5, #e91e63);
+}
+.sp1 {
+    background: linear-gradient(#007513, #e91e63);
+}
+.inst1 {
+    background: linear-gradient(#f3a71a, #e91e63);
+}
+.btn:hover .holder {
+    transform: translateY(0);
+}
+.userdata {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+input {
+    padding: 1em;
+    margin: 0.5em;
+    border: none;
+    border-radius: 20px;
+    background: none;
+    backdrop-filter: opacity(1);
+    color: white;
+}
+input[type=submit] {
+    color: black;
+    background: white;
+    filter: opacity(1);
+    cursor: pointer;
+}
+.login a {
+    margin: 5px;
+    text-decoration: none;
+    color: #ce1b6c;
+}
+.login h1 {
+    color: white;
+}
+.square1 {
+    position: absolute;
+    z-index: -1;
+    width: 50px;
+    height: 50px;
+    top: 10px;
+    animation: login-square1 4s linear infinite alternate;
+
+}
+.square2 {
+    position: absolute;
+    z-index: 1;
+    width: 80px;
+    height: 90px;
+    top: 220px;
+    left: 25em;
+}
+.square3 {
+    position: absolute;
+    z-index: -1;
+    width: 70px;
+    height: 60px;
+    top: 300px;
+    left: 45em;
+    animation: login-square3 4s linear infinite alternate;
+}
+.square1, .square2, .square3 {
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    background: rgba(185, 49, 126, 0.34);
+}
+@keyframes login-square1 {
+    from{
+        top: 10px;
+        left: 50%;
+    }
+    50%{
+        top: 10px;
+        left: calc(50% + 7em);
+    }
+    to{
+        top: 200px;
+        left: calc(50% + 7em);
+    }
+}
+@keyframes login-square3 {
+    from{
+        top: 300px;
+        left: 45em;
+    }
+    50%{
+        top: 400px;
+        left: 45em;
+    }
+    to{
+        top: 400px;
+        left: 45%;
+    }
+}
