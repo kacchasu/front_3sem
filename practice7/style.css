@@ -71,17 +71,19 @@ body::after {
     opacity: 1;
 }
 .card:hover {
-    transition: 1s linear;
-    transform:  scale(110%);
+    transition: 0.5s ease;
+    transform:  scale(105%);
     z-index: 2;
 }
 .card:hover + .modal {
     position: absolute;
-    width: 100%;
-    height: 152%;
+    left: 0;
+    top: -100%;
+    width: 103.5%;
+    height: 205%;
     z-index: 1;
-    backdrop-filter: blur(20px);
-    transition: 1s;
+    backdrop-filter: blur(20px) brightness(40%);
+
 }
 .container .card .content h2 {
     position: absolute;
@@ -250,9 +252,6 @@ button {
 .border-rays:hover::before {
     animation-play-state: running;
     filter: brightness(130%);
-}
-.border-rays:hover {
-    box-shadow: 0 0 0 99999px rgba(0, 0, 0, 0.8);
 }
 .border-rays::after {
     content: '';
