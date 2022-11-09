@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #161623;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: circle(30% at right 70%);
+    background: linear-gradient(#f00, #f0f);
+}
+body::after {
+    content: '';
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#2196f3, #e91e63);
+    clip-path: circle(20% at 10% 10%);
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+.btn {
+    border: none;
+    padding: 3px;
+    margin: 0 5px;
+    border-radius: 25%;
+    cursor: pointer;
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.tg {
+    transition: 1s ease-in;
+}
+.yt {
+    transition: 1s ease-in;
+}
+.twi {
+    transition: 1s ease-in;
+}
+.sp {
+    transition: 1s ease-in;
+}
+.inst {
+    transition: 1s ease-in;
+}
+
+
+button img {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    z-index: 3;
+}
+
+@media (min-width: 769px) {
+    button img {
+        width: 30px;
+        height: 30px;
+    }
+    .btn {
+        padding: 5px;
+    }
+}
+@media (min-width: 1001px) {
+    button img {
+        width: 40px;
+        height: 40px;
+    }
+    .btn {
+        padding: 8px;
+    }
+}
+footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    bottom: -20px;
+    margin-bottom: 3%;
+}
+button {
+    background: none;
+    overflow: hidden;
+    display: flex;
+}
+.buttons {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.holder {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width:100vw;
+    height: 100vh;
+    transform: translateY(-100vh);
+    transition: 1s linear;
+}
+.tg1 {
+    background: linear-gradient(#0088cc, #e91e63);
+}
+.yt1 {
+    background: linear-gradient(#b9021e, #e91e63);
+}
+.twi1 {
+    background: linear-gradient(#25aff5, #e91e63);
+}
+.sp1 {
+    background: linear-gradient(#007513, #e91e63);
+}
+.inst1 {
+    background: linear-gradient(#f3a71a, #e91e63);
+}
+.btn:hover .holder {
+    transform: translateY(0);
+}
+.main-head {
+    grid-area: header;
+}
+.content {
+    grid-area: content;
+}
+.main-nav {
+    grid-area: nav;
+}
+.side {
+    grid-area: sidebar;
+}
+.ad {
+    grid-area: ad;
+}
+.main-footer {
+    display: grid;
+    place-items: center;
+    grid-area: footer;
+    gap: 20px;
+    grid-template-areas:
+    "socials"
+    "links"
+    "artists"
+    "contacts";
+}
+h3 {
+    transition: .5s;
+}
+footer h3:hover {
+    transform: scale(110%);
+    color: white;
+}
+@media (min-width: 769px) {
+    .main-footer{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+      "socials  links"
+      "artists  contacts"
+
+    }
+}
+@media (min-width: 1001px) {
+    .main-footer{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+      "socials  links artists contacts";
+    }
+}
+.socials {
+    grid-area: socials;
+}
+.contacts {
+    grid-area: contacts;
+}
+.links {
+    grid-area: links;
+}
+.artists {
+    grid-area: artists;
+}
+.wrapper {
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+    "header"
+    "nav"
+    "content"
+    "sidebar"
+    "ad"
+    "footer";
+}
+@media (min-width: 769px) {
+    .wrapper {
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas:
+      "header  header"
+      "nav     nav"
+      "sidebar content"
+      "ad      footer";
+    }
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+@media (min-width: 1001px) {
+    .wrapper {
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-areas:
+      "header header  header"
+      "nav    content sidebar"
+      "nav    content ad"
+      "footer footer  footer";
+    }
+    nav ul {
+        flex-direction: column;
+    }
+}
