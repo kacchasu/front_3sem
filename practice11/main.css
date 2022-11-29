@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+   
+}
+/* подключение шрифтов */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Raleway:ital,wght@0,100;0,200;0,300;0,500;0,700;1,200;1,300;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
+body{
+    text-align: center;
+    font-family: "Comfortaa";
+    color: rgb(53, 39, 87);
+    background-color: rgb(234, 223, 177)
+}
+.main_button {
+  
+}
+.filter{
+    color: #f6e1cf;
+}
+ 
+.shop__cart {  
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    height: auto;
+    overflow: hidden;
+    background-color: #000000;
+    border-radius: 8px;
+    text-align-last: left;
+    margin: 10px;
+    color: #f6e1cf;
+
+}
+.shop__cart-inner{
+
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+    background-color: #a7b0ec00;
+    width: fit-content;
+    margin-top: 75px;
+}
+.shop__cart-inner>div{
+    text-align: center;
+    font-size: 18px;
+}
+.main_button{
+    background-color: saddlebrown;
+    border: none;
+    width: 100%;
+}
+.notif {
+    position: absolute;
+    color: #f6e1cf;
+
+    left: 750px;
+    top: 235px;
+    width: 200px;
+    background-color: #000000;
+    overflow: hidden;
+    transition: .3s;
+    border-radius: 8px;
+}
+
+i {
+    font-size: 20px;
+    color: #f6e1cf;
+    background-color: rgba(0, 0, 0, 0.151);
+    padding: 10px;
+    border-radius: 30px;
+}
+.shop__cart-header {
+    display: flex;
+    
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: saddlebrown;
+    width: 100%;
+    position: absolute;
+    padding: 10px;
+    gap:10px;
+}
+.shop__cart-header button{
+    border: none;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.151);
+
+    color: #f6e1cf;
+}
+input {
+    border-radius: 10px;
+    background-color: black;
+    color: #f6e1cf;
+}
+button {
+    border-radius: 10px;
+    background-color: black;
+    color: #f6e1cf;
+}
+.array, .new_array {
+    color: black;
+}
